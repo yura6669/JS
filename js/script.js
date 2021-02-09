@@ -1,39 +1,35 @@
-'use strict';
+if (2 * 4 == 8) {
+    console.log('Правильно');
+} else {
+    console.log("Неправильно");
+}
 
-let money = prompt("Ваш бюджет на місяць?", "0");
+let num = 50;
 
-let time = prompt("Ведіть дату в форматі YYYY-MM-DD", "YYYY-MM-DD");
+if(num < 49) {
+    console.log('Неправильно');
+} else if(num > 100) {
+    console.log('Забагато');
+} else if(num >= 50) {
+    console.log('Правильно');
+}
 
-var appData = {
-    budget:money,
-    timeData:time,
-    expenses: {},
-    optionalExpenses: {},
-    income: [],
-    savings: false
-};
+(num >= 50) ? console.log('Правильно') : console.log('Неправильно');
 
-let a1 = prompt("Введіть обов'язкові розходи в цьому місяці", "..."), 
-    a2 = prompt("В скільки ці розходи обійдуться?", "..."),
-    a3 = prompt("Введіть обов'язкові розходи в цьому місяці", "..."),
-    a4 = prompt("В скільки ці розходи обійдуться?", "...");
-
-    appData.expenses.a1 = a2;
-    appData.expenses.a3 = a4;
-
-    alert (appData.budget / 30);
-
-    console.log("Ваш бюджет на місяць - " + money);
-    console.log("Сьогоднішня дата - " + time);
-    console.log("Ваш бюджет на місяць - " + appData.budget);
-    console.log("Сьогоднішня дата - " + appData.timeData);
-    console.log("Обов'язкові розходи - " + appData.expenses);
-    console.log("Необов'язкові розходи - " + appData.optionalExpenses);
-    console.log("Додатковий дохід - " + appData.income);
-    console.log("Saving - " + appData.savings);
-    console.log("Створений об'єкт - " + appData);
-    console.log("обов'язкові розходи в цьому місяці - " + a1);
-    console.log("Сума розходів - " + a2);
-    console.log("обов'язкові розходи в цьому місяці - " + a3);
-    console.log("Сума розходів - " + a4);
-    console.log("Бюджет на один день - " + appData.budget / 30);
+switch (num) {
+    case num < 49:
+        console.log('Неправильно');
+    break;
+    case num > 100:
+        console.log('Забагато');
+    break;
+    case num > 80:
+        console.log('Все ще забагато');
+    break;
+    case 50:
+        console.log('Правильно');
+    break;
+    default:
+        console.log('Щось пішло не так');
+    break;
+}
